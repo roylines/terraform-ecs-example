@@ -17,3 +17,18 @@ module "api-gateway" {
   desired_count = 2
 }
 
+module "auth" {
+  source = "git::https://github.com/roylines/terraform-ecs-microservice?ref=v1.0.0" 
+  // don't change these
+  vpc_id = "${module.ecs.vpc_id}"
+  vpc = "${var.vpc}"
+  subnets = "${module.ecs.subnets}"
+  cluster_id = "${module.ecs.cluster_id}"
+  private_zone_id = "${module.ecs.private_zone_id}"
+  
+  // you can change these
+  name = "auth"
+  image = "roylines/nginx"
+  port = 8001
+  desired_count = 1
+}
