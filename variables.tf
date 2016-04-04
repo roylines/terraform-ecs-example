@@ -15,3 +15,8 @@ variable "public_zone_id" {
 variable "public_domain" {
   description = "the name for the domain"
 }
+
+variable "ssh_public_key" {
+  description = "public key to allow ssh to cluster instances"
+}
+

@@ -2,12 +2,10 @@ dependencies:
   pre:
     - wget https://releases.hashicorp.com/terraform/0.6.14/terraform_0.6.14_linux_amd64.zip
     - unzip terraform_0.6.14_linux_amd64.zip
-    - mkdir ~/.ssh
-    - ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
 test:
   override:
     - ./terraform --version
     - ./terraform get
-    - ./terraform plan --var 'public_domain="foo"' --var public_zone_id="ZZZZZZZ"
+    - ./terraform plan --var "public_domain=$PUBLIC_DOMAIN" --var "public_zone_id=$PUBLIC_ZONE_ID" --var "ssh_public_key=$SSH_PUBLIC_KEY"
 
