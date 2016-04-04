@@ -1,6 +1,5 @@
 module "api-gateway" {
-  source = "github.com/roylines/terraform-ecs-api-gateway"
-  
+  source = "git::https://github.com/roylines/terraform-ecs-api-gateway?ref=v1.0.0" 
   // don't change these
   vpc_id = "${module.ecs.vpc_id}"
   vpc = "${var.vpc}"
