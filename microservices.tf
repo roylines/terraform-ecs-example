@@ -1,6 +1,5 @@
-module "www" {
-  //source = "github.com/roylines/terraform-ecs-microservice"
-  source = "../terraform-ecs-microservice"
+module "api-gateway" {
+  source = "github.com/roylines/terraform-ecs-api-gateway"
   
   // don't change these
   vpc_id = "${module.ecs.vpc_id}"
@@ -8,12 +7,14 @@ module "www" {
   subnets = "${module.ecs.subnets}"
   cluster_id = "${module.ecs.cluster_id}"
   private_zone_id = "${module.ecs.private_zone_id}"
-
+  public_zone_id = "${var.public_zone_id}"
+  public_domain = "${var.public_domain}"
+  
   // you can change these
-  name = "www"
+  public_subdomain = "www"
+  name = "api-gateway"
   image = "roylines/nginx"
   port = 8000
   desired_count = 2
-  internal = false
 }
 
