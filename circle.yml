@@ -7,5 +7,5 @@ test:
   override:
     - ./terraform --version
     - ./terraform get
-    - ./terraform plan
+    - ./terraform plan --var 'public_domain="foo"' --var public_zone_id="ZZZZZZZ"
 
