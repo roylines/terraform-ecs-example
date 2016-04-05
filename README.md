@@ -1,4 +1,6 @@
 # terraform-ecs-example
+[![Circle CI](https://circleci.com/gh/roylines/terraform-ecs-example.svg?style=svg)](https://circleci.com/gh/roylines/terraform-ecs-example)
+
 An example pulling together the usage of the following terraform modules:
 
 - [https://github.com/roylines/terraform-ecs](https://github.com/roylines/terraform-ecs)
