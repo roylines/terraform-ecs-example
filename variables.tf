@@ -20,3 +20,8 @@ variable "ssh_public_key" {
   description = "public key to allow ssh to cluster instances"
 }
 
+variable "cluster_desired_size" {
+  description = "Desired cluster size"
+  default = 2
+}
+
