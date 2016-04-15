@@ -3,8 +3,7 @@ variable "datadog_api_key" {
 }
 
 module "datadog" {
-  //source = "git::https://github.com/roylines/terraform-ecs-datadog?ref=v1.0.0" 
-  source = "../terraform-ecs-datadog"
+  source = "git::https://github.com/roylines/terraform-ecs-datadog?ref=v1.0.1" 
   vpc = "${var.vpc}"
   cluster_id = "${module.ecs.cluster_id}"
   desired_count = "${var.cluster_desired_size}"
