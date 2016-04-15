@@ -7,5 +7,5 @@ test:
   override:
     - ./terraform --version
     - ./terraform get
-    - ./terraform plan --var "public_domain=$PUBLIC_DOMAIN" --var "public_zone_id=$PUBLIC_ZONE_ID" --var "ssh_public_key=$SSH_PUBLIC_KEY --var datadog_api_key=xxxx"
+    - ./terraform plan --var "public_domain=$PUBLIC_DOMAIN" --var "public_zone_id=$PUBLIC_ZONE_ID" --var "ssh_public_key=$SSH_PUBLIC_KEY" --var "datadog_api_key=xxxx"
 
