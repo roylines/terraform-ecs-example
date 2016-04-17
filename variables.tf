@@ -25,3 +25,14 @@ variable "cluster_desired_size" {
   default = 2
 }
 
+variable "datadog_api_key" {
+  description = "datadog api key"
+}
+
+variable "datadog_account_id" {
+  description = "datadog account id"
+}
+
+variable "datadog_external_id" {
+  description = "datadog external id"
+}
