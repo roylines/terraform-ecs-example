@@ -8,6 +8,11 @@ variable "max_microservice_count" {
   default = 20
 }
 
+variable "newrelic_license_key" {
+  description = "new relic license key"
+  default = "none"
+}
+
 variable "public_zone_id" {
   description = "the hosted zone id for the domain"
 }
