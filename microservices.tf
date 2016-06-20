@@ -1,3 +1,4 @@
+/*
 module "api-gateway" {
   source = "git::https://github.com/roylines/terraform-ecs-api-gateway?ref=v1.1.0" 
   // don't change these
@@ -16,6 +17,7 @@ module "api-gateway" {
   port = 8000
   desired_count = 2
 }
+*/
 
 module "auth" {
   source = "git::https://github.com/roylines/terraform-ecs-microservice?ref=v1.1.0" 
@@ -30,5 +32,6 @@ module "auth" {
   name = "auth"
   image = "roylines/nginx"
   port = 8001
-  desired_count = 1
+  desired_count = 2
 }
+

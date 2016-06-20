@@ -13,6 +13,21 @@ variable "newrelic_license_key" {
   default = "none"
 }
 
+variable "ruxit_account" {
+  description = "the ruxit account number (only needed for ruxit support)"
+  default = "none"
+}
+
+variable "ruxit_token" {
+  description = "the ruxit token (only needed for ruxit support)"
+  default = "none"
+}
+
+variable "sysdig_access_key" {
+  description = "the sysdig access key (only needed for sysdig support)"
+  default = "none"
+}
+
 variable "public_zone_id" {
   description = "the hosted zone id for the domain"
 }
