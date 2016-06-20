@@ -1,5 +1,5 @@
 module "ecs" {
-  source = "git::https://github.com/roylines/terraform-ecs?ref=v2.2.0" 
+  source = "git::https://github.com/roylines/terraform-ecs?ref=v2.3.0" 
   vpc = "${var.vpc}"
   ssh_public_key = "${var.ssh_public_key}"
   cluster_desired_size = "${var.cluster_desired_size}"
